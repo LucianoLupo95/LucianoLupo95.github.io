@@ -1,0 +1,14 @@
+*{
+    background-color:black;
+    color: white;
+    font-family: Raleway, bold;
+    text-align: center;
+}
+.footer{
+    display: inline;
+    background-color: black;
+}
+.nav{
+    display: inline;
+}
+
