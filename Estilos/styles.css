@@ -1,14 +1,129 @@
-*{
-    background-color:black;
-    color: white;
-    font-family: Raleway, bold;
-    text-align: center;
-}
-.footer{
-    display: inline;
-    background-color: black;
-}
-.nav{
-    display: inline;
+body{
+    background-color: #C4C4C4;
+    padding-top: 52px;
 }
 
+/*Nav*/
+.menu{
+    position: fixed;
+    top: 0px;
+    background-color: black;
+    width: 100%;
+    text-align: end;
+    margin-bottom: 20%;
+}
+.menu__opcion{
+
+    display: inline-block;
+    padding: 10px;
+    margin-right: 40px;
+}
+.menu__opcion a{
+    text-decoration: none;
+    font-family: Montserrat, Arial;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 26px;
+    color: white;
+    line-height: 32px;
+}
+.actual{
+    background-color:white; 
+    border-radius: 66px;
+}
+.actual a{
+    color: black;
+}
+
+/*Foto y descripcion */
+.presentacion{
+    height: 100vh;
+}
+.presentacion__texto{
+    float: left;
+    width: 50%;
+    height: 100%;
+
+}
+.presentacion__texto h1{
+    position: absolute;
+    width: 471px;
+    height: 242px;
+    left: 76px;
+    top: 259px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 117px;
+    text-align: center;
+
+}
+.presentacion__texto p{
+    position: absolute;
+    width: 426px;
+    height: 167px;
+    left: 76px;
+    top: 558px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: #919191;
+
+}
+.presentacion__foto{
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+.fotoPersonal{
+    height: 100%;
+    max-width: 100%;
+} 
+
+/*Footer*/
+.footer{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+.footer__opcion{
+    display: inline-block;
+    padding: 10px;
+    margin-right: 40px;
+}
+.footer__opcion a{
+    font-family: Montserrat, Arial;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 26px;
+    color: white;
+    line-height: 32px;
+}
+
+
+
+
+/*-------------------------*------Contacto---------------------*/
+.contacto{
+    height: 80vh;
+    background-color: black;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+}
+.contacto h1{
+    margin: 0px;
+    padding-top: 60px;
+    color: white;
+}
