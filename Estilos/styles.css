@@ -1,3 +1,8 @@
+*{  margin:0;    
+    padding:0;    
+    } 
+    
+    
 body{
     background-color: #C4C4C4;
     padding-top: 52px;
@@ -20,7 +25,7 @@ body{
 }
 .menu__opcion a{
     text-decoration: none;
-    font-family: Montserrat, Arial;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bolder;
     font-size: 26px;
@@ -51,8 +56,7 @@ body{
     height: 242px;
     left: 76px;
     top: 259px;
-
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 100px;
@@ -66,13 +70,11 @@ body{
     height: 167px;
     left: 76px;
     top: 558px;
-
     font-family: Raleway;
     font-style: normal;
     font-weight: 800;
     font-size: 40px;
     line-height: 47px;
-
     color: #919191;
 
 }
@@ -100,30 +102,145 @@ body{
 }
 .footer__opcion a{
     font-family: Montserrat, Arial;
-    font-style: normal;
     font-weight: bolder;
     font-size: 26px;
     color: white;
     line-height: 32px;
 }
 
+/*-------------------------*------Tecnologías---------------------*/
+.titulo{
+    margin-top: 64px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 7px 8px 14px;
+    font-weight: bold;
+    line-height: 73px;
+}
 
+.tecnologias{
+    margin: 118px 158px 118px 139px;
+    text-align: center;
+    text-shadow: 7px 8px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 49px;
+}
+.logo{
+    height: 156px;
+}
+.tecnologias li{
+    list-style-type: none;
+    margin-top: 75px;
+    display: inline-block;
+    margin-left: 147px;
+    margin-right: 156px;
+    margin-bottom: 60px;
+}
+.tecnologias img{
+    display: block;
+    margin-bottom: 20px;
+}
 
+/*-------------------------------Proyectos---------------------*/
+.proyectos{
+    margin-left: 73px;
+    margin-bottom: 10vh;
+    padding-top: 85px;
+}
+.proyectos article{
+    display: inline-block;
+    margin-right: 78px;
+    width: 400px;
+    top: 2px;
 
-/*-------------------------*------Contacto---------------------*/
+}
+.proyectos img{
+    top: 0px;
+}
+.proyectos h2{
+    text-shadow: 7px 8px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    overflow-x: hidden;
+
+    
+}
+.proyectos p{
+    color: white;
+    text-shadow: 7px 8px 14px black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    line-height: 37px;  
+}
+
+/*-------------------------------Experiencia---------------------*/
+.subtitulo{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 73px;
+    text-align: center;
+}
+
+.experiencia{
+    text-shadow: 7px 8px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    padding: 30px;
+}
+.experiencia p{
+    color: white;
+    text-shadow: 7px 8px 14px black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    line-height: 37px;  
+}
+/*-------------------------------Contacto---------------------*/
 .contacto{
-    height: 80vh;
+    background-color: black;
+}
+.formulario{
     background-color: black;
     text-align: center;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;;
     font-style: normal;
     font-weight: bold;
     font-size: 60px;
     line-height: 73px;
+    position: relative;
+}
+.formulario h1{
+    margin-top: 71px;
+    color: white;
     text-align: center;
 }
-.contacto h1{
-    margin: 0px;
-    padding-top: 60px;
-    color: white;
+.formulario input{
+    margin-top: 48px;
+    font-size: 60px;
+    text-align: center;
+    display: inline;
+    width: 590px;
+    height: 79px;
+    margin-bottom: 33px;
+    margin-right: 20px;
+}
+.formulario textarea{
+    font-size: 60px;
+    text-align: center;
+    justify-content: center;
+    width: 1266px;
+    height: 337px;
+}
+.formulario button{
+    font-size: 60px;
+    display: block;
+    text-align: center;    
+    width: 590px;
 }
