@@ -1,6 +1,6 @@
 *{  margin:0;    
     padding:0;
-    cursor: url(/Recursos/flechaL.png), auto;    
+    /* cursor: url(/Recursos/flechaL.png), auto;     */
     } 
     
     
@@ -121,7 +121,7 @@ body{
 }
 
 .tecnologias{
-    margin: 118px 158px 118px 139px;
+    /* margin: 118px 158px 118px 139px; */
     text-align: center;
     text-shadow: 7px 8px 14px;
     font-family: 'Montserrat', sans-serif;
@@ -136,9 +136,10 @@ body{
     list-style-type: none;
     margin-top: 75px;
     display: inline-block;
-    margin-left: 147px;
-    margin-right: 156px;
+    margin-left: 120px;
+    margin-right: 60px;
     margin-bottom: 60px;
+    padding: 0px 0px 0px ;
 }
 .tecnologias img{
     display: block;
