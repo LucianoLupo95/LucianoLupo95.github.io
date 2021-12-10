@@ -1,4 +1,4 @@
-*{  margin:0;    
+*{  margin:0 ;  
     padding:0;
     /* cursor: url(/Recursos/flechaL.png), auto;     */
     } 
@@ -6,25 +6,94 @@
     
 body{
     background-color: #C4C4C4;
-    padding-top: 52px;
 }
 
-/*Nav*/
-.menu{
-    position: fixed;
-    top: 0px;
+
+/*---------------------------Layout---------------------------*/
+#layout_generico{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 79px auto 79px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+main{
+    grid-area: main;
+    flex-direction: row;
+}
+
+#layout_home{
+    display: grid;
+    grid-template-columns: 0.59fr 0.78fr;
+    grid-template-rows: 79px 85vh 79px;
+    grid-template-areas: 
+        "header header"
+        "nombre fotoPersonal"
+        "footer footer"
+    ;
+
+}
+header{
+    grid-area: header;
     background-color: black;
+    color: white;
+    position: fixed;
     width: 100%;
-    text-align: end;
-    margin-bottom: 20%;
+    padding: 0px;
+    height: 79px;
+    
 }
-.menu__opcion{
+#nombre{
+    grid-area: nombre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nombre h1{    
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 150px;
+    line-height: 117px;
+    text-align: center;
+    padding: 50px;
+}
 
-    display: inline-block;
+#nombre p{
+    font-family: Raleway;
+    font-style: ExtraBold;
+    font-weight: 800px;
+    font-size: 100px;
+    line-height: 100px;
+    color: #919191;
+}
+#fotoPersonal{
+    grid-area: fotoPersonal;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#fotoPersonal img{
+    height: 100%;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;    
+    align-content: center;
+    list-style: none;
+    
+}
+nav ul li{
     padding: 10px;
     margin-right: 40px;
 }
-.menu__opcion a{
+nav ul li a{
+    
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -33,85 +102,34 @@ body{
     color: white;
     line-height: 32px;
 }
-.actual{
+#actual{
     background-color:white; 
     border-radius: 66px;
 }
-.actual a{
+#actual a{
     color: black;
 }
-
-/*Foto y descripcion */
-.presentacion{
-    height: 100vh;
-}
-.presentacion__texto{
-    float: left;
-    width: 50%;
-    height: 100%;
-
-}
-.presentacion__texto h1{
-    position: absolute;
-    width: 471px;
-    height: 242px;
-    left: 76px;
-    top: 259px;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 100px;
-    line-height: 117px;
-    text-align: center;
-
-}
-.presentacion__texto p{
-    position: absolute;
-    width: 426px;
-    height: 167px;
-    left: 76px;
-    top: 558px;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 47px;
-    color: #919191;
-
-}
-.presentacion__foto{
-    float: right;
-    width: 50%;
-    height: 100%;
-}
-.fotoPersonal{
-    height: 100%;
-    max-width: 100%;
-} 
-
-/*Footer*/
-.footer{
-    position: relative;
+footer{
+    grid-area: footer;
     background-color: black;
-    width: 100%;
-    text-align: center;
-}
-.footer__opcion{
-    display: inline-block;
-    padding: 10px;
-    margin-right: 40px;
-}
-.footer__opcion a{
-    font-family: Montserrat, Arial;
-    font-weight: bolder;
-    font-size: 26px;
     color: white;
-    line-height: 32px;
+    align-items: center;
+    bottom: 0px;
+}
+footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    list-style: none;    
+}
+footer ul li{
+    padding: 10px 10px 0px 10px;
+    margin-right: 40px;
 }
 
 /*-------------------------*------Tecnologías---------------------*/
 .titulo{
-    margin-top: 64px;
+    padding-top: 64px;
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
     text-align: center;
@@ -121,7 +139,6 @@ body{
 }
 
 .tecnologias{
-    /* margin: 118px 158px 118px 139px; */
     text-align: center;
     text-shadow: 7px 8px 14px;
     font-family: 'Montserrat', sans-serif;
@@ -245,4 +262,5 @@ body{
     display: block;
     text-align: center;    
     width: 590px;
-}
+} 
+
