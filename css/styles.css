@@ -59,19 +59,33 @@ header{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 150px;
+    font-size: 9rem;
     line-height: 117px;
     text-align: center;
     padding: 50px;
+    animation: aparecer 1s linear 2s;
+    animation-fill-mode: backwards;
 }
 
-#nombre p{
+#nombre h2{
     font-family: Raleway;
     font-style: ExtraBold;
     font-weight: 800px;
-    font-size: 100px;
+    font-size: 5rem;
     line-height: 100px;
     color: #919191;
+}
+#fullstack{
+    animation: aparecer 1s linear 3s;
+    animation-fill-mode: backwards;
+}
+#data{
+    animation: aparecer 1s linear 4s;
+    animation-fill-mode: backwards;
+}
+#psicologia{
+    animation: aparecer 1s linear 5s;
+    animation-fill-mode: backwards;
 }
 #fotoPersonal{
     grid-area: fotoPersonal;
@@ -79,9 +93,17 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    
 }
+
 #fotoPersonal img{
     height: 100%;
+    animation: aparecer 2s ease-out;
+}
+@keyframes aparecer {
+    0% { opacity:0;}
+    50% { opacity:0.5;}
+    100% { opacity:1;}
 }
 nav ul{
     display: flex;
