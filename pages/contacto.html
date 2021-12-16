@@ -6,12 +6,15 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Luciano Lupo</title>
-            <link rel="stylesheet" href="../css/styles.css">
             <meta name="keywords" content="Luciano Lupo, desarrollador, developer, FullStack">
             <meta name="author" content="Luciano Lupo">
             <meta name="description" content="Portafolio personal de Luciano Lupo">
             <meta name="copyright" content="Luciano Lupo">
             <link rel="icon" href="../img/fotoLuciano.ico">
+            <!--Bootstrap-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <!--CSS-->
+            <link rel="stylesheet" href="../css/styles.css">
             <!--Fuentes de Google-->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +23,19 @@
 <body class="contacto">
     <div id="layout_generico">
         <header>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/tecnologias.html">Tecnologías</a></li>
-                    <li><a href="../pages/proyectos.html">Proyectos</a></li>
-                    <li><a href="../pages/experiencia.html">Experiencia</a></li>
-                    <li id="actual"><a href="../pages/contacto.html">Contacto</a></li>
+            <nav class="container">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/tecnologias.html">Tecnologías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/proyectos.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/experiencia.html">Experiencia</a></li>
+                    <li class="nav-item" id="actual"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <form class="formulario" action="">
-                <h1>CONTACTAME</h1>
+                <h1 class="formulario-titulo">CONTACTAME</h1>
                 <input type="text" placeholder="Nombre">
                 <input type="email" placeholder="Email">
                 <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea><br>
