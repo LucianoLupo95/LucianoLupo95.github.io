@@ -7,8 +7,15 @@
 body{
     background-color: #C4C4C4;
 }
+$titulos: 60px;
+$tamanios_textos: (
+    nav: 26px,
+    nombre: ($titulos * 1.66),    
+    subtitulos: ($titulos * 0.66),
+    texto: ($titulos / 2)
+); 
 
-
+$fuente_titulos:'Montserrat', sans-serif;
 /*---------------------------Layout---------------------------*/
 #layout_generico{
     display: grid;
@@ -49,16 +56,19 @@ header{
     height: 79px;
     
 }
+
+@mixin tipo_de_fuente{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
 #nombre{
     grid-area: nombre;
     display: flex;
     justify-content: center;
     align-items: center;
     h1{
-        font-family: 'Raleway', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 100px;
+        @include tipo_de_fuente;
+        font-size: map-get($tamanios_textos, nombre);
         line-height: 117px;
         text-align: center;
         padding: 50px;
@@ -66,25 +76,24 @@ header{
         animation-fill-mode: backwards;
     }
     h2{
-        font-family: Raleway;
-        font-style: ExtraBold;
-        font-weight: 800px;
-        font-size: 40px;
-        line-height: 47px;
+        @include tipo_de_fuente;
+        font-size: $titulos;
+        line-height: 60px;
         color: #919191;
     }
 }
-#fullstack{
+
+.fullstack{
     animation: aparecer 1s linear 3s;
     animation-fill-mode: backwards;
 }
-#data{
-    animation: aparecer 1s linear 4s;
-    animation-fill-mode: backwards;
+.data{
+    @extend .fullstack;
+    animation-delay: 4s;
 }
-#psicologia{
-    animation: aparecer 1s linear 5s;
-    animation-fill-mode: backwards;
+.psicologia{
+    @extend .fullstack;
+    animation-delay: 5s;
 }
 #fotoPersonal{
     grid-area: fotoPersonal;
@@ -115,10 +124,10 @@ nav ul{
         margin-right: 40px;
         a{
             text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
+            font-family: $fuente_titulos;
             font-style: normal;
             font-weight: bolder;
-            font-size: 26px;
+            font-size: map-get($tamanios_textos, nav);;
             color: white;
             line-height: 32px;
                 }
@@ -154,8 +163,8 @@ footer{
 /*-------------------------*------Tecnologías---------------------*/
 .titulo{
     padding-top: 64px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
+    font-family: $fuente_titulos;
+    font-size: $titulos;
     text-align: center;
     text-shadow: 7px 8px 14px;
     font-weight: bold;
@@ -165,8 +174,8 @@ footer{
 .tecnologias{
     text-align: center;
     text-shadow: 7px 8px 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
+    font-family: $fuente_titulos;
+    font-size: map-get($tamanios_textos, subtitulos);
     font-weight: bolder;
     line-height: 49px;
     li{
@@ -206,16 +215,16 @@ footer{
     }
     h2{
         text-shadow: 7px 8px 14px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 40px;
+        font-family: $fuente_titulos;
+        font-size: map-get($tamanios_textos, subtitulos);
         line-height: 49px;
         overflow-x: hidden;
     }
     p{
         color: white;
         text-shadow: 7px 8px 14px black;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 30px;
+        font-family: $fuente_titulos;
+        font-size: map-get($tamanios_textos, texto);
         line-height: 37px;  
     }
 
@@ -223,24 +232,21 @@ footer{
 /*-------------------------------Experiencia---------------------*/
 .subtitulo{
     text-align: center;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: $fuente_titulos;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: $titulos;
     line-height: 73px;
     text-align: center;
 }
 
 .experiencia{
     text-shadow: 7px 8px 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    line-height: 49px;
+    font-family: $fuente_titulos;
     padding: 30px;
     color: white;
     text-shadow: 7px 8px 14px black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: map-get($tamanios_textos, texto);
     line-height: 37px;  
     display: flex;
     justify-content: center;
@@ -266,7 +272,7 @@ footer{
     font-family: 'Montserrat', sans-serif;;
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: $titulos;
     line-height: 73px;
     position: relative;
     h1{
@@ -276,7 +282,7 @@ footer{
     }
     input{
         margin-top: 48px;
-        font-size: 60px;
+        font-size: $titulos;
         text-align: center;
         display: inline;
         width: 590px;
@@ -285,14 +291,14 @@ footer{
         margin-right: 20px;
     }
     textarea{
-        font-size: 60px;
+        font-size: $titulos;
         text-align: center;
         justify-content: center;
         width: 1266px;
         height: 337px;
     }
     button{
-        font-size: 60px;
+        font-size: $titulos;
         display: block;
         text-align: center;    
         width: 590px;
@@ -331,7 +337,7 @@ footer{
                 font-family: 'Montserrat', sans-serif;
                 font-style: normal;
                 font-weight: bolder;
-                font-size: 26px;
+                font-size: map-get($tamanios_textos, nav);
                 color: white;
                 line-height: 32px;
             }
@@ -372,10 +378,8 @@ footer{
             margin: 0px;
             padding: 0px;
             h1{
-                font-family: 'Raleway', sans-serif;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 40px;
+                @include tipo_de_fuente;
+                font-size: map-get($tamanios_textos, subtitulos);
                 margin: 0px;
                 padding: 2px 0px 0px 0px;
                 line-height: 47px;
@@ -385,9 +389,7 @@ footer{
                 animation-fill-mode: backwards;
             }
             h2{
-                font-family: Raleway;
-                font-style: ExtraBold;
-                font-weight: bold;
+                @include tipo_de_fuente;
                 font-size: 20px;
                 line-height: 23px;
                 color: #919191;

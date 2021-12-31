@@ -79,9 +79,8 @@ header {
 
 #nombre h1 {
   font-family: 'Raleway', sans-serif;
-  font-style: normal;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 99.6px;
   line-height: 117px;
   text-align: center;
   padding: 50px;
@@ -92,33 +91,28 @@ header {
 }
 
 #nombre h2 {
-  font-family: Raleway;
-  font-style: ExtraBold;
-  font-weight: 800px;
-  font-size: 40px;
-  line-height: 47px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
   color: #919191;
 }
 
-#fullstack {
+.fullstack, .data, .psicologia {
   -webkit-animation: aparecer 1s linear 3s;
           animation: aparecer 1s linear 3s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
 
-#data {
-  -webkit-animation: aparecer 1s linear 4s;
-          animation: aparecer 1s linear 4s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+.data {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
-#psicologia {
-  -webkit-animation: aparecer 1s linear 5s;
-          animation: aparecer 1s linear 5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+.psicologia {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 #fotoPersonal {
@@ -188,7 +182,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bolder;
   font-size: 26px;
@@ -238,7 +232,7 @@ footer ul li {
 /*-------------------------*------Tecnologías---------------------*/
 .titulo {
   padding-top: 64px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 60px;
   text-align: center;
   text-shadow: 7px 8px 14px;
@@ -249,8 +243,8 @@ footer ul li {
 .tecnologias {
   text-align: center;
   text-shadow: 7px 8px 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 39.6px;
   font-weight: bolder;
   line-height: 49px;
 }
@@ -300,8 +294,8 @@ footer ul li {
 
 .proyectos h2 {
   text-shadow: 7px 8px 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 39.6px;
   line-height: 49px;
   overflow-x: hidden;
 }
@@ -309,7 +303,7 @@ footer ul li {
 .proyectos p {
   color: white;
   text-shadow: 7px 8px 14px black;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   line-height: 37px;
 }
@@ -317,23 +311,20 @@ footer ul li {
 /*-------------------------------Experiencia---------------------*/
 .subtitulo {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 60px;
   line-height: 73px;
   text-align: center;
 }
 
 .experiencia {
   text-shadow: 7px 8px 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  line-height: 49px;
+  font-family: "Montserrat", sans-serif;
   padding: 30px;
   color: white;
   text-shadow: 7px 8px 14px black;
-  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   line-height: 37px;
   display: -webkit-box;
@@ -497,9 +488,8 @@ footer ul li {
   }
   #nombre div h1 {
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 39.6px;
     margin: 0px;
     padding: 2px 0px 0px 0px;
     line-height: 47px;
@@ -512,8 +502,7 @@ footer ul li {
             animation-fill-mode: backwards;
   }
   #nombre div h2 {
-    font-family: Raleway;
-    font-style: ExtraBold;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
