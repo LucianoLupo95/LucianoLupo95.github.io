@@ -2,139 +2,123 @@
 * {
   margin: 0;
   padding: 0;
-  /* cursor: url(/Recursos/flechaL.png), auto;     */
 }
 
 body {
-  background-color: #C4C4C4;
-}
-
-/*---------------------------Layout---------------------------*/
-#layout_generico {
-  display: -ms-grid;
+  background-color: black;
   display: grid;
-  -ms-grid-columns: 100vw;
-      grid-template-columns: 100vw;
-  -ms-grid-rows: 79px auto 79px;
-      grid-template-rows: 79px auto 79px;
-      grid-template-areas: "header" "main" "footer";
-}
-
-main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: main;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#layout_home {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 42% 57%;
-      grid-template-columns: 42% 57%;
-  -ms-grid-rows: 79px 85vh 79px;
-      grid-template-rows: 79px 85vh 79px;
-      grid-template-areas: "header header" "nombre fotoPersonal" "footer footer";
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  grid-template-rows: 12.34vh auto 6.71vh;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "main" "footer";
 }
 
 header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-  color: white;
   position: fixed;
   width: 100%;
-  padding: 0px;
-  height: 79px;
+  height: 12.34vh;
+  grid-area: header;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  background-color: black;
+}
+
+.navbar {
+  padding: 0;
+  margin-top: 2vh;
+}
+
+.navbar-toggler {
+  height: 10.34vh;
+  border-color: transparent !important;
+  padding-bottom: 0;
+}
+
+.navbar-toggler-icon {
+  font-size: 3.7vh;
+}
+
+.nav-item {
+  background-color: black;
+  color: white;
+}
+.nav-item .nav-link {
+  color: white !important;
+}
+
+main {
+  grid-area: main;
+  background-color: #C4C4C4;
+}
+
+footer {
+  overflow: hidden;
+  grid-area: footer;
+  max-height: 6.71vh;
+  padding-top: 0.05%;
+  padding-bottom: 0.05%;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  height: 100%;
+}
+footer ul li {
+  padding-left: 4%;
+  height: 99%;
+}
+footer ul li img {
+  height: 100%;
+}
+
+.presentacion {
+  max-height: 80.95vh;
+}
+
+.foto-personal-contenedor {
+  height: 59.84vh;
+  width: auto;
+  background-color: black;
+  background-image: url("/img/fotoLuciano.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 #nombre {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: nombre;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 5%;
 }
-
 #nombre h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: 99.6px;
-  line-height: 117px;
+  font-size: 2.5rem;
   text-align: center;
-  padding: 50px;
-  -webkit-animation: aparecer 1s linear 2s;
-          animation: aparecer 1s linear 2s;
+  -webkit-animation: aparecer 1s linear;
+          animation: aparecer 1s linear;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-
 #nombre h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: 60px;
-  line-height: 60px;
-  color: #919191;
+  font-size: 1.32rem;
+  color: #909090;
 }
 
-.fullstack, .data, .psicologia {
-  -webkit-animation: aparecer 1s linear 3s;
-          animation: aparecer 1s linear 3s;
+.desarrollo, .psicologia {
+  -webkit-animation: aparecer 1s linear 1s;
+          animation: aparecer 1s linear 1s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
-}
-
-.data {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
 }
 
 .psicologia {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
-
-#fotoPersonal {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: fotoPersonal;
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#fotoPersonal img {
-  height: 100%;
-  -webkit-animation: aparecer 2s ease-out;
-          animation: aparecer 2s ease-out;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 @-webkit-keyframes aparecer {
@@ -160,105 +144,33 @@ header {
     opacity: 1;
   }
 }
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  list-style: none;
-}
-
-nav ul li {
-  padding: 10px;
-  margin-right: 40px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 26px;
-  color: white;
-  line-height: 32px;
-}
-
-#actual {
-  background-color: white;
-  border-radius: 66px;
-}
-
-#actual a {
-  color: black;
-}
-
-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: footer;
-  background-color: black;
-  color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  bottom: 0px;
-}
-
-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  list-style: none;
-}
-
-footer ul li {
-  padding: 10px 10px 0px 10px;
-  margin-right: 40px;
-}
-
 /*-------------------------*------Tecnologías---------------------*/
 .titulo {
-  padding-top: 64px;
+  padding-top: 10%;
   font-family: "Montserrat", sans-serif;
-  font-size: 60px;
+  font-size: 2rem;
   text-align: center;
   text-shadow: 7px 8px 14px;
-  font-weight: bold;
-  line-height: 73px;
+  font-weight: 900;
 }
 
 .tecnologias {
   text-align: center;
   text-shadow: 7px 8px 14px;
   font-family: "Montserrat", sans-serif;
-  font-size: 39.6px;
+  font-size: 1.32rem;
   font-weight: bolder;
   line-height: 49px;
 }
-
 .tecnologias li {
   list-style-type: none;
-  margin-top: 75px;
+  margin-top: 10%;
   display: inline-block;
-  margin-left: 120px;
+  margin-left: 15%;
   margin-right: 60px;
   margin-bottom: 60px;
   padding: 0px 0px 0px;
 }
-
 .tecnologias img {
   display: block;
   margin-bottom: 20px;
@@ -268,295 +180,201 @@ footer ul li {
   height: 156px;
 }
 
-/*-------------------------------Proyectos---------------------*/
 .proyectos {
-  margin-left: 73px;
-  margin-bottom: 10vh;
-  padding-top: 85px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-left: 10%;
+  width: 100vw;
 }
-
-.proyectos article {
-  display: inline-block;
-  margin-right: 78px;
-  width: 400px;
-  top: 2px;
-}
-
 .proyectos img {
-  top: 0px;
+  max-width: 80%;
 }
 
-.proyectos h2 {
-  text-shadow: 7px 8px 14px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 39.6px;
-  line-height: 49px;
-  overflow-x: hidden;
-}
-
-.proyectos p {
-  color: white;
-  text-shadow: 7px 8px 14px black;
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  line-height: 37px;
-}
-
-/*-------------------------------Experiencia---------------------*/
 .subtitulo {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 60px;
-  line-height: 73px;
+  font-size: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .experiencia {
-  text-shadow: 7px 8px 14px;
-  font-family: "Montserrat", sans-serif;
-  padding: 30px;
-  color: white;
-  text-shadow: 7px 8px 14px black;
-  font-size: 30px;
-  line-height: 37px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: 10%;
+  width: 100vw;
 }
-
 .experiencia article {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 60vh 20vh;
-      grid-template-columns: 60vh 20vh;
-  -ms-grid-rows: 40vh;
-      grid-template-rows: 40vh;
-      grid-template-areas: "descripcion foto";
-}
-
-/*-------------------------------Contacto---------------------*/
-.contacto {
-  background-color: black;
+  width: 80vw;
+  margin-bottom: 10%;
 }
 
 .formulario {
   background-color: black;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 73px;
-  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.32rem;
+  font-weight: bolder;
+  padding-bottom: 10%;
 }
-
 .formulario h1 {
-  margin-top: 71px;
   color: white;
-  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
-
 .formulario input {
-  margin-top: 48px;
-  font-size: 60px;
+  font-size: 2rem;
+  width: 90vw;
+  margin-bottom: 5%;
   text-align: center;
-  display: inline;
-  width: 590px;
-  height: 79px;
-  margin-bottom: 33px;
-  margin-right: 20px;
 }
-
 .formulario textarea {
-  font-size: 60px;
+  width: 90vw;
+  height: 30vh;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 1266px;
-  height: 337px;
+  font-size: 2.5rem;
+}
+.formulario [type=submit] {
+  width: 50vw;
 }
 
-.formulario button {
-  font-size: 60px;
-  display: block;
-  text-align: center;
-  width: 590px;
-}
+@media screen and (min-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
 
-/*-------------------------------Media Queries---------------------*/
-@media screen and (max-width: 600px) {
-  #layout_generico {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100vh;
-        grid-template-columns: 100vh;
-    -ms-grid-rows: 12.34vh auto 6.71vh;
-        grid-template-rows: 12.34vh auto 6.71vh;
-        grid-template-areas: "header" "main" "footer";
+  .nav-item {
+    background-color: transparent;
   }
-  main {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: main;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+
+  .titulo {
+    padding-top: 5%;
   }
-  nav ul {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    max-height: 12.34vh;
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
+
+  .titulo, .subtitulo, .formulario {
+    font-size: 3.5rem;
   }
-  nav ul li {
-    margin-top: 20px;
-    padding: 2px;
-    margin-right: 33%;
+
+  .tecnologias {
+    font-size: 3rem;
   }
-  nav ul li a {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: bolder;
-    font-size: 26px;
-    color: white;
-    line-height: 32px;
+
+  .formulario textarea, .formulario input {
+    font-size: 3rem;
   }
-  nav ul:hover {
-    overflow: visible;
-  }
-  #actual {
-    background-color: white;
-    border-radius: 66px;
-  }
-  #actual a {
-    color: black;
-    pointer-events: none;
-  }
-  #layout_home {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100vw;
-        grid-template-columns: 100vw;
-    -ms-grid-rows: 12.34vh 59.84vh 21.09vh 6.71vh;
-        grid-template-rows: 12.34vh 59.84vh 21.09vh 6.71vh;
-        grid-template-areas: "header" "fotoPersonal" "nombre" "footer";
-  }
-  #nombre {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: nombre;
-    display: -webkit-box;
-    display: -ms-flexbox;
+
+  .presentacion {
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row-reverse;
+    height: 80.95vh;
   }
-  #nombre div {
-    max-height: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    margin: 0px;
-    padding: 0px;
+
+  .foto-personal-contenedor {
+    width: 50vw;
+    height: 80.95vh;
+    background-size: contain;
   }
-  #nombre div h1 {
-    font-family: 'Raleway', sans-serif;
+
+  #nombre {
+    padding: 5%;
+    margin: 0;
+    width: 50vw;
+  }
+  #nombre h1 {
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
-    font-size: 39.6px;
-    margin: 0px;
-    padding: 2px 0px 0px 0px;
-    line-height: 47px;
+    font-size: 4rem;
     text-align: center;
-    -webkit-animation: none;
-            animation: none;
-    -webkit-animation: aparecer 1s linear 2s;
-            animation: aparecer 1s linear 2s;
+    -webkit-animation: aparecer 1s linear;
+            animation: aparecer 1s linear;
     -webkit-animation-fill-mode: backwards;
             animation-fill-mode: backwards;
   }
-  #nombre div h2 {
-    font-family: 'Raleway', sans-serif;
+  #nombre h2 {
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    color: #919191;
+    font-size: 2rem;
+    color: #909090;
   }
-  #fotoPersonal {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: fotoPersonal;
-    background-color: black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+
+  .tecnologias {
+    text-align: justify;
   }
-  #fotoPersonal img {
-    height: auto;
-    width: 100vw;
-    -webkit-animation: aparecer 2s ease-out;
-            animation: aparecer 2s ease-out;
+  .tecnologias li {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-  footer {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: footer;
-    background-color: black;
-    color: white;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    bottom: 0px;
+
+  .proyectos article {
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
-  footer ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    list-style: none;
+  .proyectos article h2 {
+    font-size: 2.5rem;
   }
-  footer ul li {
-    margin-right: 16px;
+  .proyectos article p {
+    font-size: 2rem;
   }
-  footer ul li img {
-    max-width: 36.22px;
-    height: 88.44%;
+
+  .trabajo h3 {
+    font-size: 2.5rem;
+  }
+  .trabajo p {
+    font-size: 2rem;
+  }
+
+  .experiencia {
+    margin-top: 10%;
+  }
+
+  .formulario {
+    padding-bottom: 2%;
+  }
+  .formulario h1 {
+    font-size: 6rem;
+    padding: 2%;
+  }
+  .formulario input {
+    margin-bottom: 1%;
+  }
+  .formulario textarea {
+    height: 19vh;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+@media screen and (min-width: 1092px) {
+  header {
+    font-size: 2.5rem;
+  }
+
+  .presentacion {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 80.95vh;
+  }
+
+  .foto-personal-contenedor {
+    width: 50vw;
+    height: 80.95vh;
+    background-size: contain;
+  }
+
+  #nombre {
+    padding: 5%;
+    margin: 0;
+    width: 50vw;
+  }
+  #nombre h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 8rem;
+    text-align: center;
+    -webkit-animation: aparecer 1s linear;
+            animation: aparecer 1s linear;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+  }
+  #nombre h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #909090;
+  }
+}/*# sourceMappingURL=styles.css.map */

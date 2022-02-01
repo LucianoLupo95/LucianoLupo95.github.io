@@ -1,174 +1,142 @@
-*{  margin:0 ;  
-    padding:0;
-    /* cursor: url(/Recursos/flechaL.png), auto;     */
-    } 
-    
+*{  margin:0;  
+    padding:0; 
+} 
+
     
 body{
-    background-color: #C4C4C4;
-}
-$titulos: 60px;
-$tamanios_textos: (
-    nav: 26px,
-    nombre: ($titulos * 1.66),    
-    subtitulos: ($titulos * 0.66),
-    texto: ($titulos / 2)
-); 
-
-$fuente_titulos:'Montserrat', sans-serif;
-/*---------------------------Layout---------------------------*/
-#layout_generico{
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 79px auto 79px;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-}
-
-main{
-    grid-area: main;
-    flex-direction: row;
-}
-
-#layout_home{
-    display: grid;
-    grid-template-columns: 42% 57%;
-    grid-template-rows: 79px 85vh 79px;
-    grid-template-areas: 
-        "header header"
-        "nombre fotoPersonal"
-        "footer footer"
-    ;
-
-}
-header{
-    grid-area: header;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     background-color: black;
-    color: white;
-    position: fixed;
+    display: grid;
     width: 100%;
-    padding: 0px;
-    height: 79px;
-    
+    height: auto;
+    min-height: 100vh;
+    grid-template-rows: 12.34vh auto 6.71vh;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
 }
-
+$fuente_titulos:'Montserrat', sans-serif;
 @mixin tipo_de_fuente{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+$titulos: 2rem;
+$tamanios_textos: (
+    nombre: 2.5rem,
+    nav: 2rem,   
+    subtitulos: ($titulos * 0.66),
+    texto: ($titulos / 2)
+); 
+header{
+    position: fixed;
+    width: 100%;
+    height: 12.34vh;
+    grid-area: header;
+    font-family: $fuente_titulos;
+    font-size: map-get($tamanios_textos, nav);;
+    font-weight: bolder;
+    background-color: black;
+}
+.navbar{
+    padding: 0;
+    margin-top: 2vh;
+}
+.navbar-toggler{
+    height: 10.34vh;
+    border-color: transparent !important;
+    padding-bottom: 0;
+}
+.navbar-toggler-icon{
+    font-size: 3.70vh;   
+}
+
+.nav-item{
+    background-color: black;
+    color: white;
+    .nav-link{
+        color: white !important;
+    }
+}
+main{
+    grid-area: main;
+    background-color: #C4C4C4;
+}
+footer{
+    overflow: hidden;
+    grid-area:footer;
+    max-height: 6.71vh;
+    padding-top: 0.05%;
+    padding-bottom: 0.05%;
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        height: 100%;
+        li{
+            padding-left: 4%;
+            height: 99%;
+            img{
+                height: 100%;
+            }
+        }
+    }
+}
+.presentacion{
+    max-height: 80.95vh;
+}
+.foto-personal-contenedor{
+    height: 59.84vh;
+    width: auto;
+    background-color: black;
+    background-image: url("/img/fotoLuciano.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
 #nombre{
-    grid-area: nombre;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 5%;
     h1{
         @include tipo_de_fuente;
         font-size: map-get($tamanios_textos, nombre);
-        line-height: 117px;
         text-align: center;
-        padding: 50px;
-        animation: aparecer 1s linear 2s;
+        animation: aparecer 1s linear;
         animation-fill-mode: backwards;
     }
     h2{
         @include tipo_de_fuente;
-        font-size: $titulos;
-        line-height: 60px;
-        color: #919191;
+        font-size: map-get($tamanios_textos, subtitulos);
+        color: #909090;
     }
 }
 
-.fullstack{
-    animation: aparecer 1s linear 3s;
+
+
+
+.desarrollo{
+    animation: aparecer 1s linear 1s;
     animation-fill-mode: backwards;
 }
-.data{
-    @extend .fullstack;
-    animation-delay: 4s;
-}
 .psicologia{
-    @extend .fullstack;
-    animation-delay: 5s;
+    @extend .desarrollo;
+    animation-delay: 2s;
 }
-#fotoPersonal{
-    grid-area: fotoPersonal;
-    background-color: black;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    img{
-        height: 100%;
-        animation: aparecer 2s ease-out;
-    }
-    
-}
+
 
 @keyframes aparecer {
     0% { opacity:0;}
     50% { opacity:0.5;}
     100% { opacity:1;}
 }
-nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;    
-    align-content: center;
-    list-style: none;
-    li{
-        padding: 10px;
-        margin-right: 40px;
-        a{
-            text-decoration: none;
-            font-family: $fuente_titulos;
-            font-style: normal;
-            font-weight: bolder;
-            font-size: map-get($tamanios_textos, nav);;
-            color: white;
-            line-height: 32px;
-                }
-    }
-    
-}
-
-#actual{
-    background-color:white; 
-    border-radius: 66px;
-    a{
-        color: black;
-    }
-}
-footer{
-    grid-area: footer;
-    background-color: black;
-    color: white;
-    align-items: center;
-    bottom: 0px;
-    ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;    
-        list-style: none; 
-        li{
-            padding: 10px 10px 0px 10px;
-            margin-right: 40px;
-        }   
-    }
-}
 
 /*-------------------------*------Tecnologías---------------------*/
 .titulo{
-    padding-top: 64px;
+    padding-top: 10%;
     font-family: $fuente_titulos;
     font-size: $titulos;
     text-align: center;
     text-shadow: 7px 8px 14px;
-    font-weight: bold;
-    line-height: 73px;
+    font-weight: 900;
 }
 
 .tecnologias{
@@ -180,9 +148,9 @@ footer{
     line-height: 49px;
     li{
         list-style-type: none;
-        margin-top: 75px;
+        margin-top: 10%;
         display: inline-block;
-        margin-left: 120px;
+        margin-left: 15%;
         margin-right: 60px;
         margin-bottom: 60px;
         padding: 0px 0px 0px ;
@@ -197,236 +165,190 @@ footer{
 }
 
 
-/*-------------------------------Proyectos---------------------*/
-.proyectos{
-    margin-left: 73px;
-    margin-bottom: 10vh;
-    padding-top: 85px;
-    display: flex;
-    justify-content: center;
-    article{
-        display: inline-block;
-        margin-right: 78px;
-        width: 400px;
-        top: 2px;    
-    }
-    img{
-        top: 0px;
-    }
-    h2{
-        text-shadow: 7px 8px 14px;
-        font-family: $fuente_titulos;
-        font-size: map-get($tamanios_textos, subtitulos);
-        line-height: 49px;
-        overflow-x: hidden;
-    }
-    p{
-        color: white;
-        text-shadow: 7px 8px 14px black;
-        font-family: $fuente_titulos;
-        font-size: map-get($tamanios_textos, texto);
-        line-height: 37px;  
-    }
 
+
+// /*-------------------------------Proyectos---------------------*/
+.proyectos{
+    margin-left: 10%;
+    width: 100vw;
+    img{
+        max-width: 80%;
+    }
 }
-/*-------------------------------Experiencia---------------------*/
+// /*-------------------------------Experiencia---------------------*/
 .subtitulo{
     text-align: center;
     font-family: $fuente_titulos;
     font-style: normal;
     font-weight: bold;
     font-size: $titulos;
-    line-height: 73px;
     text-align: center;
+    margin-bottom: 2rem;
 }
-
 .experiencia{
-    text-shadow: 7px 8px 14px;
-    font-family: $fuente_titulos;
-    padding: 30px;
-    color: white;
-    text-shadow: 7px 8px 14px black;
-    font-size: map-get($tamanios_textos, texto);
-    line-height: 37px;  
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 10%;
+    width: 100vw;
     article{
-        display: grid;
-        grid-template-columns: 60vh 20vh;
-        grid-template-rows: 40vh;
-        grid-template-areas: 
-            "descripcion foto"
-        ;
+        width: 80vw;
+        margin-bottom: 10%;
     }
 }
 
-/*-------------------------------Contacto---------------------*/
-.contacto{
-    background-color: black;
-}
+
+// /*-------------------------------Contacto---------------------*/
 .formulario{
     background-color: black;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;;
-    font-style: normal;
-    font-weight: bold;
-    font-size: $titulos;
-    line-height: 73px;
-    position: relative;
+    font-family: $fuente_titulos;
+    font-size: map-get($tamanios_textos, subtitulos);
+    font-weight: bolder;
+    padding-bottom: 10%;
     h1{
-        margin-top: 71px;
         color: white;
-        text-align: center;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
     input{
-        margin-top: 48px;
         font-size: $titulos;
+        width: 90vw;
+        margin-bottom: 5%;
         text-align: center;
-        display: inline;
-        width: 590px;
-        height: 79px;
-        margin-bottom: 33px;
-        margin-right: 20px;
     }
     textarea{
-        font-size: $titulos;
+        width: 90vw;
+        height: 30vh;
         text-align: center;
-        justify-content: center;
-        width: 1266px;
-        height: 337px;
+        font-size: map-get($tamanios_textos, nombre);
     }
-    button{
-        font-size: $titulos;
-        display: block;
-        text-align: center;    
-        width: 590px;
+    [type="submit"]{  
+        width: 50vw;
     }
 }
 
-/*-------------------------------Media Queries---------------------*/
-@media screen and (max-width: 600px) {
-    #layout_generico{
-        display: grid;
-        grid-template-columns: 100vh;
-        grid-template-rows: 12.34vh auto 6.71vh;
-        grid-template-areas: 
-            "header"
-            "main"
-            "footer";
-    }    
-    main{
-        grid-area: main;
-        flex-direction: row;
+
+// /*-------------------------------Media Queries---------------------*/
+
+@media screen and (min-width:768px) {
+    header{
+        font-size: 1.5rem;
     }
-    nav ul{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        max-height: 12.34vh;
-        overflow: hidden;
-        display: inline-block;
-        text-align: center;
-        li{
-            margin-top: 20px;
-            padding:2px;
-            margin-right: 33%;
-            a{
-                text-decoration: none;
-                font-family: 'Montserrat', sans-serif;
-                font-style: normal;
-                font-weight: bolder;
-                font-size: map-get($tamanios_textos, nav);
-                color: white;
-                line-height: 32px;
-            }
+    .nav-item{
+        background-color: transparent;
+    }
+    .titulo{
+        padding-top: 5%;
+    }
+    .titulo, .subtitulo, .formulario{
+        font-size: 3.5rem;
+    }
+    .tecnologias{
+        font-size: 3rem;
+    }
+    .formulario{
+        textarea, input{
+            font-size: 3rem;
         }
     }
-    nav ul:hover{
-        overflow:visible;
+    .presentacion{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 80.95vh;
     }
-    #actual{
-        background-color:white; 
-        border-radius: 66px;
-        a{
-            color: black;
-            pointer-events: none
-        }
-    }
-    #layout_home{
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows:  12.34vh 59.84vh 21.09vh 6.71vh;
-        grid-template-areas: 
-            "header"
-            "fotoPersonal"
-            "nombre"
-            "footer"
-        ;
-    
+    .foto-personal-contenedor{
+        width: 50vw;
+        height: 80.95vh;
+        background-size: contain;
     }
     #nombre{
-        grid-area: nombre;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        div{
-            max-height: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            margin: 0px;
-            padding: 0px;
-            h1{
-                @include tipo_de_fuente;
-                font-size: map-get($tamanios_textos, subtitulos);
-                margin: 0px;
-                padding: 2px 0px 0px 0px;
-                line-height: 47px;
-                text-align: center;
-                animation: none;
-                animation: aparecer 1s linear 2s; 
-                animation-fill-mode: backwards;
-            }
-            h2{
-                @include tipo_de_fuente;
-                font-size: 20px;
-                line-height: 23px;
-                color: #919191;
-            }
+        padding: 5%;
+        margin: 0;
+        width: 50vw;
+        h1{
+            @include tipo_de_fuente;
+            font-size: 4rem;
+            text-align: center;
+            animation: aparecer 1s linear;
+            animation-fill-mode: backwards;
+        }
+        h2{
+            @include tipo_de_fuente;
+            font-size: 2rem;
+            color: #909090;
         }
     }
+    .tecnologias{
+        text-align: justify;
+        li{
 
-    #fotoPersonal{
-        grid-area: fotoPersonal;
-        background-color: black;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        img{
-            height: auto;
-            width: 100vw;
-            animation: aparecer 2s ease-out;
+            margin-left: 5%;
+            margin-right: 5%;
+
         }
     }
-    footer{
-        grid-area: footer;
-        background-color: black;
-        color: white;
-        align-items: center;
-        bottom: 0px;
-        ul{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;    
-            list-style: none; 
-            li{
-                margin-right: 16px;
-                img{
-                    max-width: 36.22px;
-                    height: 88.44%;
-                }
-            }  
+    .proyectos article{
+        h2{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+    .trabajo{
+        h3{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+    }
+    .experiencia{
+        margin-top: 10%;
+    }
+    .formulario{
+        h1{
+            font-size: 6rem;
+            padding: 2%;
+        }
+        input{
+            margin-bottom: 1%;
+        }
+        textarea{
+            height: 19vh;
+        }
+        padding-bottom: 2%;
+    }
+}
+@media screen and (min-width:1092px) {
+    header{
+        font-size: 2.5rem;
+    }
+    .presentacion{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 80.95vh;
+    }
+    .foto-personal-contenedor{
+        width: 50vw;
+        height: 80.95vh;
+        background-size: contain;
+    }
+    #nombre{
+        padding: 5%;
+        margin: 0;
+        width: 50vw;
+        h1{
+            @include tipo_de_fuente;
+            font-size: 8rem;
+            text-align: center;
+            animation: aparecer 1s linear;
+            animation-fill-mode: backwards;     
+        }
+        h2{
+            @include tipo_de_fuente;
+            font-size: 4rem;
+            color: #909090;
         }
     }
 }
