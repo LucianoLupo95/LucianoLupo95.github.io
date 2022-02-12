@@ -1,0 +1,50 @@
+#area-opciones {
+    height: 60vh;
+    width: 30vw;
+    font-family: Arial;
+    font-size: 18pt;
+}
+.submit {
+  display: block;
+  width: 20vw;
+  height: fill;
+  font-size: 18pt;
+}
+#pregunta {
+  position: absolute;
+  top: 0;
+  right: 30vw;
+}
+.instrucciones1 {
+  position: absolute;
+  top: 25vh;
+  right: 40vw;
+  color: white;
+  background-color: black;
+  font-size: 14pt;
+}
+.instrucciones2 {
+  position: absolute;
+  top: 25vh;
+  right: 10vw;
+  color: white;
+  background-color: black;
+  font-size: 14pt;
+}
+
+.opcion {
+  height: 10vh;
+  width: 10vw;
+  position: absolute;
+  top: 30vh;
+}
+.opcion--1 {
+  right: 40vw;
+  background-color: red;
+  font-size: 18pt;
+}
+.opcion--2 {
+  right: 20vw;
+  background-color: blue;
+  font-size: 18pt;
+}
