@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Maker</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <textarea id="area-opciones"  placeholder="Inserta tus opciones, una por linea"></textarea>
+    <input class="submit" type="submit" onclick="start()"></input>
+    <h1 id="pregunta">¿Cuál preferís?</h1>
+    <h2 id="guia">Contador</h2>
+    <div>
+        <button class="opcion opcion--1" onclick="elegir(0)"></button>
+        <legend class="instrucciones1">Selecciona con el boton 1 o la flecha a la izquierda</legend>
+    </div>
+    <div>
+        <button class="opcion opcion--2" onclick="elegir(1)"></button>
+        <legend class="instrucciones2">Selecciona con el boton 2 o la flecha a la derecha</legend>
+    </div>   
+    <p id="resultado"></p>
+</body>
+<script src="./script.js"></script>
+</html>
