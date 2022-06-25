@@ -180,12 +180,20 @@ footer ul li img {
   height: 156px;
 }
 
-.proyectos {
+.proyectos_contenedor {
   margin-left: 10%;
   width: 100vw;
 }
-.proyectos img {
-  max-width: 80%;
+
+.proyectos{
+  height: 30vh;
+  display: block;
+}
+.proyectos_imagenes {
+  height: 100%;
+  max-width: 20%;
+  float: left;
+
 }
 
 .subtitulo {
