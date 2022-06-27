@@ -3,3 +3,7 @@ body{
     margin: 0;
     padding: 0;
 }
+#css-code{
+    width: 50%;
+    font-family: sans-serif;
+}
