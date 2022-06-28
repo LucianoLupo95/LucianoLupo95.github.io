@@ -1,5 +1,7 @@
 #textarea{
-    font-size: 18pt;
+    font-size: 2em;
+    max-width: 80vw;
+    height: 100px;
 }
 
 #hiragana{

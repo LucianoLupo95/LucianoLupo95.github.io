@@ -1,22 +1,22 @@
 let text = document.querySelector("#textarea");
 let hiraganaTraduction = document.querySelector("#hiragana");
-let copyHiraganaButton = document.querySelector("#copyHiragana")
+// let copyHiraganaButton = document.querySelector("#copyHiragana")
 
 const translate = () =>{
     textToTranslate = text.value;
     hiraganaTraduction.innerHTML = hiragana(textToTranslate);
 }
 
-const copyHiragana = () =>{
-    hiraganaTraduction.select();
-    textarea.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(hiraganaTraduction.value);
-    alert("Copiado\n" + hiraganaTraduction.value);
-}
+// const copyHiragana = () =>{
+//     hiraganaTraduction.select();
+//     textarea.setSelectionRange(0, 99999);
+//     navigator.clipboard.writeText(hiraganaTraduction.value);
+//     alert("Copiado\n" + hiraganaTraduction.value);
+// }
 
 
 text.addEventListener("keyup", translate);
-copyHiraganaButton.addEventListener("click", copyHiragana)
+// copyHiraganaButton.addEventListener("click", copyHiragana)
 
 const hiragana = (text) =>{
     text = normalize(text);
