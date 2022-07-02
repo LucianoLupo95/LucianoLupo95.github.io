@@ -2,8 +2,31 @@ body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-size: 8vh;
+    text-shadow: 4px 4px 10px rgba(150, 150, 150, 1);
+    text-align: center;
+}
+input{
+    max-width: 80%;
 }
 #css-code{
-    width: 50%;
+    width: 90%;
     font-family: sans-serif;
+}
+#controllers_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.controllers{
+    background-color: white;
+    padding: 2%;
+    margin: 2px;
+    border: 2px solid;
+    border-radius: 25px;
+    max-width: 25%;
+    font-size: 2vh;
+    overflow: hidden;
 }

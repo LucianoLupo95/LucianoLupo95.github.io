@@ -5,27 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@800&display=swap" rel="stylesheet">
     <title>Gradient Maker</title>
 </head>
 <body>
     <h1>Create your own gradient</h1>
     <div>
-        <h2>Colors</h2>
-        <input type="color" id="color1" value="#FFFFFF">
-        <input type="text" id="output1">
-        <input type="color" id="color2" value="#FFFFFF">
-        <input type="text" id="output2">
-        <h2>Color Stops</h2>
-        <label for="stop1">Color 1</label>
-        <input type="range" min="0" max="100" value="50" id="stop1">
-        <input type="text" id="output3">
-        <label for="stop2">Color 2</label>
-        <input type="range" min="0" max="100" value="100" id="stop2">
-        <input type="text" id="output4">
-        <h2>Angle</h2>
-        <label for="stop1">Angle</label>
-        <input type="range" min="0" max="360" value="180" id="angle">
-        <input type="text" id="output5">
+        <div id="controllers_container">
+            <div class="controllers">
+                <h2>Colors</h2>
+                <input type="color" id="color1" value="#FFFFFF">
+                <input type="text" id="output1">
+                <input type="color" id="color2" value="#FFFFFF">
+                <input type="text" id="output2">
+                <button class="randomize">Randomize</button>
+            </div>
+            <div class="controllers">
+                <h2>Color Stops</h2>
+                <label for="stop1">Color 1</label>
+                <input type="range" min="0" max="100" value="50" id="stop1">
+                <input type="text" id="output3">
+                <label for="stop2">Color 2</label>
+                <input type="range" min="0" max="100" value="100" id="stop2">
+                <input type="text" id="output4">
+            </div>
+            <div class="controllers">
+                <h2>Angle</h2>
+                <label for="stop1">Angle</label>
+                <input type="range" min="0" max="360" value="180" id="angle">
+                <input type="text" id="output5">
+            </div>
+        </div>
         <h2>Your CSS gradient code:</h2>
         <textarea id="css-code"></textarea>
         <script src="script.js"></script>

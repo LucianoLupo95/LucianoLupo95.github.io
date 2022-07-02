@@ -29,6 +29,41 @@ const writeColor = () =>{
     updateColor()
 }
 
+const randomColor = () =>{
+    let randomNum = "#";
+    for(let i = 0; i < 6; i++){
+        num = Math.floor(Math.random()*15);
+        switch(num){
+            case 10:
+                num = "A";
+                break;
+            case 11:
+                num = "B";
+                break;
+            case 12:
+                num = "C";
+                break;
+            case 13:
+                num = "D";
+                break;
+            case 14:
+                num = "E";
+                break;
+            case 15:
+                num = "F";
+                break;
+        }
+        randomNum+=num;
+    }
+    return randomNum;
+}
+const randomize = () =>{
+    color1.value = randomColor();
+    color2.value = randomColor();
+    updateColor();
+}
+
+
 let color1 = document.querySelector("#color1");
 color1.addEventListener("change", updateColor);
 
@@ -65,6 +100,11 @@ output4.addEventListener("change", writeColor);
 let output5 = document.querySelector("#output5");
 output5.value = "180";
 output5.addEventListener("change", writeColor);
+
+//Random color
+let randomizeButton = document.querySelector(".randomize");
+randomizeButton.addEventListener("click", randomize);
+
 
 
 
