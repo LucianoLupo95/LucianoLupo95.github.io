@@ -1,0 +1,13 @@
+body{
+    background:linear-gradient(121deg, #d973bc 27%, #c1ec88 100%);
+}
+#card{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+#foto{
+    height: 80%;
+    object-fit: contain;
+}
