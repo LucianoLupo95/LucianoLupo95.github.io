@@ -181,19 +181,37 @@ footer ul li img {
 }
 
 .proyectos_contenedor {
-  margin-left: 10%;
   width: 100vw;
 }
 
 .proyectos{
-  height: 30vh;
-  display: block;
+  height: 20vh;
+  margin: 2vh;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-column-gap: 5%;
 }
-.proyectos_imagenes {
+.proyectos_layout_imagen{
+  overflow: hidden;
   height: 100%;
-  max-width: 20%;
-  float: left;
+  width: auto;
+}
 
+.proyectos_layout_imagen a{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.proyectos_imagen{
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down; 
+}
+
+proyectos_texto{
+  font-size: 2vh;
+  word-wrap: normal;
 }
 
 .subtitulo {
