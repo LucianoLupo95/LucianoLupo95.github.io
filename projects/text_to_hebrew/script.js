@@ -11,6 +11,9 @@ text.addEventListener("keyup", translate);
 
 const hebrew = (text) =>{
     text = normalize(text);
+    //N final
+    let hebrewNFinal = /n$|n\b/gi;
+    text = text.replace(hebrewNFinal, "ן");
     //Ni
     let hebrewNi = /ni/gi;
     text = text.replace(hebrewNi, "נִ");
