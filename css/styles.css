@@ -91,6 +91,8 @@ footer ul li img {
 
 #nombre {
   padding: 5%;
+  /* display: flex;
+  justify-content: center; */
 }
 #nombre h1 {
   font-family: "Raleway", sans-serif;
