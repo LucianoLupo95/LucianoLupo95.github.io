@@ -67,6 +67,7 @@ const hebrew = (text) =>{
     let hebrewN = /n/gi;
     text = text.replace(hebrewN, "נ");
 
+    text = text.replace(/\n/g, '<br>');
     return text;
 }
 
