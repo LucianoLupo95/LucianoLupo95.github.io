@@ -1,0 +1,22 @@
+*{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#texto{
+    width: 48%;
+}
+#contenedor{
+    width: 48%;
+    float: right;
+    width: 40vw;
+}
+
+#texto-transformado{
+    display: inline-block;
+    width: 100%;
+}
+.resaltado{
+    background-color: red;
+}
