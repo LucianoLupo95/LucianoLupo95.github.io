@@ -1,7 +1,7 @@
 
 let texto = document.querySelector("#texto");
 let textoTransformado = document.querySelector("#texto-transformado");
-let silabas = ["MA","ME", "MI","MO","MU","PA","PE","PI","PO","PU","NA","NE","NI","NO","NU","SA","SE","SI","SO","SU", "LA","LE","LI","LO","LU","DA","DE","DI","DO","DO"];
+let silabas = ["MA","ME", "MI","MO","MU","PA","PE","PI","PO","PU","NA","NE","NI","NO","NU","SA","SE","SI","SO","SU", "LA","LE","LI","LO","LU","DA","DE","DI","DO","DO","FA","FE","FI","FO","FU","TA","TE","TI","TO","TU","RA","RE","RI","RO","RU","RRA","RRE","RRI","RRO","RRU","BA","BE","BI","BO","BU"];
 let textoPorResaltar = "";
 
 const resaltarTexto = () =>{
