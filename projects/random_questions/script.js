@@ -13,7 +13,7 @@ let questions = [
     "¿Qué querías ser de grande cuando eras chico?",
     "¿Cuál es tu deporte favorito?",
     "¿Cuál es tu actor favorito?",
-    "¿Cuál es tu actriz favorito?",
+    "¿Cuál es tu actriz favorita?",
     "¿Preferís el invierno o el verano?",
     "¿Cómo es un fin de semana ideal para vos?",
     "Nombra un hábito tuyo que los demás encuentren molesto",
@@ -32,7 +32,31 @@ let questions = [
     "¿Dormís de costado, boca arriba o boca abajo?",
     "Si pudieras cmabiar algo de tu pasado, ¿qué cambiarías?",
     "¿Qué harías si tuvieses dinero ilimitado?",
-    "Nombra 1 hobbie"
+    "Nombra 1 hobbie",
+    "¿Cuál es tu anime favorito?",
+    "¿Cual es tu personaje de ficción favorito?",
+    "¿Cuál fue la edad que más disfrutaste?",
+    "¿A quién te dicen que te pareces?",
+    "Nombra 1 canción que te guste",
+    "¿Sos más de llegar temprano o tarde?",
+    "Nombra algo que a todo el mundo le guste y a vos no",
+    "Nombra algo que a nadie le guste y a vos si",
+    "¿Te harías algún tatuaje?",
+    "Si pudieras tener la atención de todo el mundo por un segundo, ¿qué dirías?",
+    "¿Que te gusta hacer cuando estás muy estresado para relajarte?",
+    "¿Cuál es el próximo lugar que te gustaría conocer?",
+    "Si pudieras ser un animal ¿cuál serías?",
+    "Si pudieras ser un animal ¿cuál no serías?",
+    "Si pudieras ser una persona famosa quién serías?",
+    "Recomenda una película",
+    "Recomenda una serie",
+    "Recomenda un libro",
+    "¿Qué harías si pudieras detener el tiempo cuando quieras?",
+    "¿Cómo te gustaría que la gente te recordara?",
+    "¿Coca o Pepsi?",
+    "¿Vino o cerveza?",
+    "¿Dulce o salado?",
+    "Nombra algo estupido que hayas hecho alguna vez"
 ]
 
 const generateQuestion = () => {
@@ -44,3 +68,12 @@ generateQuestion()
 
 let button = document.querySelector("#next-question");
 button.addEventListener("click", generateQuestion)
+
+let flash = document.querySelector("#flash");
+setInterval(subliminal,2000)
+function subliminal(){
+    setTimeout(() => {
+        flash.innerHTML = ""
+    }, 20);
+    flash.innerHTML = "MIRA ONE PIECE"
+}
