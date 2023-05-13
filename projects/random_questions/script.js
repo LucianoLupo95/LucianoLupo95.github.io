@@ -1,6 +1,6 @@
 let question = document.querySelector("#question");
 let questions = [
-    "Si pudieses vivir en cualquier lugar, ¿En dónde te gustarpia vivir?",
+    "Si pudieses vivir en cualquier lugar, ¿En dónde te gustaría vivir?",
     "¿A qué le tenés miedo?",
     "Si pudieras cambiar algo de vos mismo, ¿qué cambiarías?",
     "Nombra algo que te haga enojar",
@@ -70,10 +70,10 @@ let button = document.querySelector("#next-question");
 button.addEventListener("click", generateQuestion)
 
 let flash = document.querySelector("#flash");
-setInterval(subliminal,2000)
+setInterval(subliminal,10000)
 function subliminal(){
     setTimeout(() => {
         flash.innerHTML = ""
-    }, 20);
+    }, 1);
     flash.innerHTML = "MIRA ONE PIECE"
 }
