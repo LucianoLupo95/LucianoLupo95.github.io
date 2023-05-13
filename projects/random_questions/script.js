@@ -70,10 +70,10 @@ let button = document.querySelector("#next-question");
 button.addEventListener("click", generateQuestion)
 
 let flash = document.querySelector("#flash");
-setInterval(subliminal,10000)
+setInterval(subliminal,2000)
 function subliminal(){
     setTimeout(() => {
         flash.innerHTML = ""
-    }, 1);
+    }, 5);
     flash.innerHTML = "MIRA ONE PIECE"
 }
