@@ -54,9 +54,26 @@ let questions = [
     "¿Qué harías si pudieras detener el tiempo cuando quieras?",
     "¿Cómo te gustaría que la gente te recordara?",
     "¿Coca o Pepsi?",
-    "¿Vino o cerveza?",
     "¿Dulce o salado?",
-    "Nombra algo estupido que hayas hecho alguna vez"
+    "Nombra algo estupido que hayas hecho alguna vez",
+    "Si tuvieses que elegir dos parejas de hombres y mujeres para repoblar la Tierra, a quienes eligirías",
+    "¿Qué preferirías: ser una persona gorda para siempre pero tan millonaria como para no trabajar más por 5 generaciones, o en forma para siempre pero conservar tu estado patrimonial actual?",
+    "Mencioná un comediante que no te de risa",
+    "¿Te, mate o café?",
+    "¿Fernet, vino o cerveza?",
+    "¿Qué es algo que te gustaría que te guste o te interese, pero no lo hace?",
+    "Menciona una persona a la que acudas por consejo",
+    "¿Qué es lo más denigrante que hiciste por aprobación?",
+    "Si pudieras nacer en cualquier parte del mundo, ¿Dónde lo harías?",
+    "¿Alguna vez quebraste?",
+    "Menciona tu último gasto boludo",
+    "Si pudieras volver a nacer, con tus conocimientos y experiencia actual, ¿preferirías ser hombre o mujer?",
+    "Si pudieras elegir una causa social para resolver, ¿cuál eligirías?",
+    "Si tuvieses que definirte en 3 cosas o acciones ¿Cómo te definirías?",
+    "¿Como definirías a la persona que tenés a tu derecha?",
+    "Decí algo que no te gusta de la persona que está a tu izquierda",
+    "¿A quién votaste en las últimas elecciones?",
+    "Nombra 3 profesiones que no te gustaría ejercer"
 ]
 
 const generateQuestion = () => {
